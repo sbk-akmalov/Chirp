@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --custom-white: #ffffff;
+    --custom-black-1: #272c30;
+    --custom-black-2: #0f1419;
+    --custom-blue-1: #e1eef6;
+    --custom-blue-2: #8ecdf7;
+    --custom-blue-3: #1d9bf0;
+    --custom-blue-4: #1b8cd8;
+    --custom-red-1: #f7dfec;
+    --custom-red-2: #f91880;
+    --custom-gray-1: #f2f2f2;
+    --custom-gray-2: #e8ecee;
+    --custom-gray-3: #536471;
+    --custom-border: #cfd9de;
+  }
+
+  .dark {
+    --custom-white: #000000;
+    --custom-black-1: #d7dbdc;
+    --custom-black-2: #e7e9ea;
+    --custom-blue-1: #0a171f;
+    --custom-blue-2: #0f4e78;
+    --custom-red-1: #200815;
+    --custom-gray-1: #181818;
+    --custom-gray-2: #202327;
+    --custom-gray-3: #71767b;
+    --custom-border: #2f3336;
+  }
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+@media (min-width: 700px) {
+  .modal-styles {
+    max-height: min(90vh, 900px);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-custom-border;
+  }
+
+  body {
+    @apply bg-custom-white text-custom-black-2;
+  }
+}
