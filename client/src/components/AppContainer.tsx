@@ -10,6 +10,8 @@ const AppContainer = () => {
   const { user, isLoading } = useAuth();
   const { pathname } = useLocation();
 
+  console.log(user);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);

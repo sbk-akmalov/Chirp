@@ -1,8 +1,8 @@
 import { RequestHandler } from "express";
-import appAssert from "../utils/app.assert";
-import { UNAUTHORIZED } from "../constants/http";
-import ErrorCode from "../constants/error.code";
-import { AccessTokenPayload, verifyToken } from "../utils/jwt";
+import appAssert from "../utils/app.assert.js";
+import { UNAUTHORIZED } from "../constants/http.js";
+import ErrorCode from "../constants/error.code.js";
+import { AccessTokenPayload, verifyToken } from "../utils/jwt.js";
 
 declare global {
   namespace Express {

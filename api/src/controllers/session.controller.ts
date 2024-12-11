@@ -1,8 +1,8 @@
 import { z } from "zod";
-import { FORBIDDEN, NOT_FOUND, OK } from "../constants/http";
-import catchErrors from "../utils/catch.errors";
-import appAssert from "../utils/app.assert";
-import prisma from "../config/prisma";
+import { FORBIDDEN, NOT_FOUND, OK } from "../constants/http.js";
+import catchErrors from "../utils/catch.errors.js";
+import appAssert from "../utils/app.assert.js";
+import prisma from "../config/prisma.js";
 
 export const getSessionsHandler = catchErrors(async (req, res) => {
   const sessions = await prisma.session.findMany({

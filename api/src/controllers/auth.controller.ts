@@ -1,30 +1,30 @@
-import prisma from "../config/prisma";
+import prisma from "../config/prisma.js";
 import {
   CONFLICT,
   CREATED,
   NOT_FOUND,
   OK,
   UNAUTHORIZED,
-} from "../constants/http";
-import appAssert from "../utils/app.assert";
-import { compareValue, hashValue } from "../utils/bcrypt";
-import catchErrors from "../utils/catch.errors";
+} from "../constants/http.js";
+import appAssert from "../utils/app.assert.js";
+import { compareValue, hashValue } from "../utils/bcrypt.js";
+import catchErrors from "../utils/catch.errors.js";
 import {
   clearAuthCookies,
   getAccessTokenCookieOptions,
   getRefreshTokenCookieOptions,
   setAuthCookies,
-} from "../utils/cookies";
+} from "../utils/cookies.js";
 import {
   AccessTokenPayload,
   RefreshTokenPayload,
   refreshTokenSignOptions,
   signToken,
   verifyToken,
-} from "../utils/jwt";
-import { ONE_DAY_MS, thirtyDaysFromNow } from "../utils/date";
+} from "../utils/jwt.js";
+import { ONE_DAY_MS, thirtyDaysFromNow } from "../utils/date.js";
 import { z } from "zod";
-import { restrictedUsernames } from "../utils/restricted";
+import { restrictedUsernames } from "../utils/restricted.js";
 
 const signupSchema = z.object({
   name: z

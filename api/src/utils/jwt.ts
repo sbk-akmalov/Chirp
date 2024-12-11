@@ -1,5 +1,5 @@
 import jwt, { SignOptions, VerifyOptions } from "jsonwebtoken";
-import { JWT_REFRESH_SECRET, JWT_SECRET } from "../constants/env";
+import { JWT_REFRESH_SECRET, JWT_SECRET } from "../constants/env.js";
 
 export type RefreshTokenPayload = {
   sessionId: string;
